@@ -5,8 +5,9 @@ class CoolButton extends React.Component {
     super();
   }
 
+  //prop.alert
   render() {
-    return <button>{this.props.text}</button>
+    return <button>This is a test</button>
   }
 }
 

@@ -2,6 +2,8 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import CoolButton from './CoolButton';
+import ClaimInput from './ClaimInput';
+import firebase from "./firebase"
 
 class App extends React.Component {
   constructor() {
@@ -12,6 +14,9 @@ class App extends React.Component {
     }
   }
 
+  myAlert = () => {
+    alert("this is a test")
+  }
   increment = () => {
     this.setState({
       count: this.state.count * this.state.count
@@ -21,11 +26,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <CoolButton text="Another thing" />
-        <CoolButton text="Another thing2"/>
-        <CoolButton />
-        <CoolButton />
-        <CoolButton />
+        <ClaimInput />
       </div>
     )
   }
