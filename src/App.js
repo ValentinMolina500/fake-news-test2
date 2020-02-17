@@ -1,26 +1,39 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import CoolButton from './CoolButton';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      count: 27
+    }
+  }
+
+  increment = () => {
+    this.setState({
+      count: this.state.count * this.state.count
+    });
+  }
+
+  render() {
+    return (
+      <div>
+        <CoolButton text="Another thing" />
+        <CoolButton text="Another thing2"/>
+        <CoolButton />
+        <CoolButton />
+        <CoolButton />
+      </div>
+    )
+  }
 }
+// function App() {
+//   return (
+//     <button>er</button>
+//   );
+// }
 
 export default App;
